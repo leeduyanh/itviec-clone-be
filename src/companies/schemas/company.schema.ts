@@ -42,3 +42,5 @@ export class Company {
     email: string;
   };
 }
+
+export const UserSchema = SchemaFactory.createForClass(Company);

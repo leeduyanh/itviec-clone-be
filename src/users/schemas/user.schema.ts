@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { HydratedDocument } from 'mongoose';
 
-export type CompanyDocument = HydratedDocument<User>;
+export type UserDocument = HydratedDocument<User>;
 
 @Schema({ timestamps: true })
 export class User {
@@ -56,3 +56,5 @@ export class User {
     email: string;
   };
 }
+
+export const UserSchema = SchemaFactory.createForClass(User);
